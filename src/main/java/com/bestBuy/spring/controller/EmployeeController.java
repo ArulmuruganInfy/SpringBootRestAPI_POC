@@ -36,32 +36,32 @@ public class EmployeeController {
 	@Autowired
 	EmployeeRepository empRepo;
 	
-	@RequestMapping(value = "/rest/emp/getAll", method = RequestMethod.GET)
+	@RequestMapping(value = "/employees", method = RequestMethod.GET)
 	public @ResponseBody List<Employee> getAllEmployees() {
 		logger.info("Controller> getAllEmployee");
 		return empRepo.findAll(); 
 	}
 	
-	@RequestMapping(value = "/rest/emp/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/employees/{id}", method = RequestMethod.GET)
 	public @ResponseBody Employee getEmployeeById(@PathVariable("id") String empId) {
 		logger.info("Controller> getEmployee with ID="+empId);
 		return empRepo.findById(empId).get();
 	}
 	
-	@RequestMapping(value = "/rest/emp/create", method = RequestMethod.POST)
+	@RequestMapping(value = "/employees", method = RequestMethod.POST)
 	public @ResponseBody Employee createEmployee(@RequestBody Employee emp) {
 		logger.info("Controller> CreateEmployee emp=>"+emp); 
 		empRepo.save(emp);
 		return emp;
 	}
 	
-	@RequestMapping(value = "/rest/emp/delete/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/employees/{id}", method = RequestMethod.DELETE)
 	public void deleteEmployee(@PathVariable("id") String empId) {
 		logger.info("Controller> deleteEmployee id="+empId);
 		empRepo.delete(new Employee(empId));
 	}
 	
-	@RequestMapping(value = "/rest/randomEndPoint", method = RequestMethod.GET)
+	@RequestMapping(value = "/randomEndPoint", method = RequestMethod.GET)
 	public @ResponseBody String hitRandomEndPoint() throws ClientProtocolException, IOException {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet("http://jsonplaceholder.typicode.com/todos/1");

@@ -15,11 +15,11 @@ Tomcat (embedded)
 
 REST End Points:
 ````````````````
-/rest/emp/create		[POST]
-/rest/emp/delete/{id} 	[PUT]
-/rest/emp/getAll 		[GET]
-/rest/emp/{id} 			[GET]
-/rest/randomEndPoint 	[GET]
+/employees		[POST]
+/employees/{id} [DELETE]
+/employees 		[GET]
+/employees/{id} [GET]
+/randomEndPoint [GET]
 
 Swagger URL:
 ````````````
