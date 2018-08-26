@@ -39,16 +39,14 @@ public class EmployeeController {
 	@RequestMapping(value = "/rest/emp/getAll", method = RequestMethod.GET)
 	public @ResponseBody List<Employee> getAllEmployees() {
 		logger.info("Controller> getAllEmployee");
-		return empRepo.findAll();
+		return empRepo.findAll(); 
 	}
 	
 	@RequestMapping(value = "/rest/emp/{id}", method = RequestMethod.GET)
 	public @ResponseBody Employee getEmployeeById(@PathVariable("id") String empId) {
 		logger.info("Controller> getEmployee with ID="+empId);
-		//return empRepo.findById(empId);
-		return null;
+		return empRepo.findById(empId).get();
 	}
-	
 	
 	@RequestMapping(value = "/rest/emp/create", method = RequestMethod.POST)
 	public @ResponseBody Employee createEmployee(@RequestBody Employee emp) {
