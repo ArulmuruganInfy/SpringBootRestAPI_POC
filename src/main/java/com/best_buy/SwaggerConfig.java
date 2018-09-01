@@ -1,4 +1,4 @@
-package com.bestBuy;
+package com.best_buy;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

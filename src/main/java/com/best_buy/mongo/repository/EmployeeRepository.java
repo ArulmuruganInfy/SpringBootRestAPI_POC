@@ -1,8 +1,8 @@
-package com.bestBuy.mongo.repository;
+package com.best_buy.mongo.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.bestBuy.spring.model.Employee;
+import com.best_buy.spring.model.Employee;
 
 public interface EmployeeRepository extends MongoRepository<Employee, String>{
 

@@ -1,4 +1,4 @@
-package com.bestBuy;
+package com.best_buy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.bestBuy.mongo.repository.EmployeeRepository;
-import com.bestBuy.spring.model.Employee;
+import com.best_buy.mongo.repository.EmployeeRepository;
+import com.best_buy.spring.model.Employee;
 
 @SpringBootApplication
 public class SpringBootRestWebServiceApplication {

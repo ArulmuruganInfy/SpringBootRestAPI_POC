@@ -1,4 +1,4 @@
-package com.bestBuy.spring.model;
+package com.best_buy.spring.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
